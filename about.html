@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [role=tablist]{padding:15px 15px 0;margin-left:88px;}
+
+[role=tab]{
+    color:#222;
+    display:inline-block;
+    padding-left:15px;
+    padding-right:15px;
+    text-decoration:none;
+    line-height:44px;
+    position:relative;
+    min-width:150px;
+    text-align:center;
+    border-radius:15px 15px 0 0}
+[role=tab]:hover{background-color:#ecf0f1;color:#222;}
+[role=tab][aria-selected=true]{
+    background-color:#3498db;
+    color:white; }
+[role=tab]:before,
+[role=tab]:after{
+    content:'';
+    border-bottom:10px solid #3498db;
+    position:absolute;
+    bottom:-10px;
+    width:44px;
+    height:22px;
+    z-index:1; }
+[role=tab][aria-selected=true]:before{
+    left:-44px;
+    border-right:10px solid #3498db;
+    border-bottom-right-radius:25px;
+}
+[role=tab][aria-selected=true]:after {
+    right:-44px;
+    border-left:10px solid #3498db;
+    border-bottom-left-radius:25px;
+}
+
+.pane{
+    background-color:#3498db;
+    padding:25px;
+    margin-left:5px;
+    margin-right:5px;
+    color:white;
+    border-radius:15px;
+}
+    </style>
+</head>
+<body>
+    <div role="tablist">
+        <a href="#" role="tab" aria-controls="active-tab1" aria-selected="true">active tab</a>
+        <a href="#" role="tab" aria-controls="active-tab2">inactive tab</a>
+        <a href="#" role="tab" aria-controls="active-tab3">inactive tab</a>
+    </div>
+    
+    <div class="pane">
+        <section id="active-tab1" role="tabpanel">
+            <p>Show whatever</p>
+            <p>You Want</p>
+            <ul>
+                <li>inside</li>
+                <li>This</li>
+                <li>Section</li>
+            </ul>
+        </section>
+        <section id="active-tab2" role="tabpanel">
+        </section>
+        <section id="active-tab3" role="tabpanel">
+        </section>
+    </div>
+</body>
+</html>
