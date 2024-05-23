@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+@media only screen and (max-width: 1160px) {
+    #links {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    #navLinks {
+        display: none;
+        flex-direction: column;
+
+    }
+
+    #navMenu {
+        display: inherit;
+    }
+}
+@media only screen and (max-width: 490px) {
+    #logoName{
+        display: none;
+    }
+}
 :root {
     --dark-theme: #272838;
     --mid-dark-theme: #32973c;
@@ -48,8 +70,12 @@ body {
     cursor: pointer;
 }
 
+.navMenu {
+    display: none;
+}
+
 .green_bold {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 700;
     color: var(--mid-dark-theme);
 }
@@ -128,19 +154,19 @@ body {
 }
 
 @keyframes headerInfo {
-    100%{
+    100% {
         width: 0px;
         display: none;
     }
 }
 
 @keyframes headerMain {
-    100%{
+    100% {
         display: none;
     }
 }
 
-.headerMain{
+.headerMain {
     position: relative;
     line-height: 25px;
     width: 99vw;
@@ -150,7 +176,7 @@ body {
     animation: headerMain 4s forwards;
 }
 
-.shade{
+.shade {
     background-color: #32973c88;
     width: 100%;
     position: absolute;
@@ -290,13 +316,12 @@ hr {
 }
 
 
-.projectsHeading{
-    font-size: 30px;
+.projectsHeading {
+    font-size: 22px;
     font-weight: 700;
     color: var(--mid-dark-theme);
-    margin-top: 50px;
-    margin-left: 211px;
-    margin-bottom: -60px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .projects {
@@ -367,7 +392,7 @@ hr {
     box-shadow: 5px 5px 15px 2px gray;
 }
 
-.section4{
+.section4 {
     display: flex;
     flex-direction: column;
 
@@ -391,19 +416,20 @@ hr {
     box-shadow: 0px 0px 15px gray;
     border-radius: 5px;
     padding: 50px;
+    width: 80%;
 
 }
 
 input {
     border-radius: 5px;
-    min-width: 600px;
+    width: 60%;
     color: gray;
     border: 2px solid var(--mid-dark-theme);
 }
 
 textarea {
     border-radius: 5px;
-    min-width: 600px;
+    width: 60%;
     min-height: 170px;
     color: gray;
     border: 2px solid var(--mid-dark-theme);
@@ -437,6 +463,7 @@ textarea {
 }
 
 .about {
+    display: flex;
     padding-top: 60px;
     margin-top: 0px;
 }
@@ -488,9 +515,9 @@ textarea {
     border-radius: 10px;
 }
 
-#skills{
+#skills {
     color: var(--mid-dark-theme);
-    border-radius:10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
     width: 150px;
     text-align: center;
     line-height: 40px;
@@ -498,13 +525,13 @@ textarea {
     font-weight: bolder;
 }
 
-#skills:hover{
+#skills:hover {
     background-color: rgb(156, 255, 204);
 }
 
-#education{
+#education {
     color: var(--mid-dark-theme);
-    border-radius:10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
     width: 150px;
     text-align: center;
     line-height: 40px;
@@ -512,7 +539,7 @@ textarea {
     font-weight: bolder;
 }
 
-#education:hover{
+#education:hover {
     background-color: rgb(156, 255, 204);
 }
 
@@ -529,10 +556,9 @@ textarea {
     font-size: 18px;
     font-weight: bolder;
     visibility: hidden
-       
 }
 
-.skillsHidden{
+.skillsHidden {
     visibility: hidden;
 }
 
@@ -544,24 +570,49 @@ textarea {
     visibility: visible;
 }
 
-.skillsFirstStyle{
+.skillsFirstStyle {
     background-color: rgb(156, 255, 204);
 
 }
 
-.skillsStyle{
+.skillsStyle {
     background-color: rgb(156, 255, 204);
 
 }
 
-.educationStyle{
+.educationStyle {
     background-color: rgb(156, 255, 204);
 
 }
-.seLine{
+
+.seLine {
     width: 66vw;
     height: 5px;
     background-color: rgb(156, 255, 204);
     border-radius: 5px;
     border: 1px solid rgb(156, 255, 204);
+}
+
+.navMenuBox {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0px 11px 25px -6px gray;
+    position: absolute;
+    width: 100%;
+    top: -150px;
+
+}
+
+.navMenuBoxList {
+    list-style-type: none;
+    background-color: rgba(250, 235, 215, 0);
+    text-align: center;
+}
+
+.navMenuBoxList li a {
+    text-decoration: none;
+    color: gray;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 3px;
 }

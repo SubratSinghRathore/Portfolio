@@ -63,3 +63,7 @@ function educationFunction(){
     document.getElementById("skills").classList.remove("skillsStyle");
     document.getElementById("skills").classList.remove("skillsFirstStyle");
 }
+
+document.getElementById("navMenu").addEventListener("click", () => {
+    
+})
