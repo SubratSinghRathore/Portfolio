@@ -42,13 +42,22 @@
         width: 40vw;
     }
     .section3 {
-        height: 76vh;
+        height: 67vh;
     }
     .about_skills {
         margin: 0px !important;
     }
     .about {
         padding-top: 0px !important;
+    }
+    p {
+        font-size: 12px;
+    }
+    .project_detail {
+        font-size: 12px;
+    }
+    .project_card {
+        height: 316px !important;
     }
 }
 
