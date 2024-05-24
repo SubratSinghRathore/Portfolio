@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <div class="headerMain">
+        <div class="headerMain" id="headerMain">
             For better experience switch to dark theme.
             <div class="shade"></div>
         </div>
@@ -81,10 +81,14 @@
             </div>
             <div class="flex">
                 <div class="navMenu cursorPointer" id="navMenu">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" color="#959595" fill="none">
-                        <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" color="#959595"
+                        fill="none">
+                        <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </div>
                 <ul class="flex" id="navLinks">
@@ -101,7 +105,7 @@
             </div>
         </nav>
         <hr>
-        <div class="navMenuBox">
+        <div class="navMenuBox" id="navMenuBox">
             <ul class="navMenuBoxList" id="navMenuBoxList">
                 <li><a class="navLink" href="#homeSection">Home</a></li>
                 <li><a class="navLink" href="#about">About</a></li>
@@ -122,10 +126,10 @@
                 <span>E</span>xperience with
             </div>
             <div class="experience margin">
-                <img width="50px" src="assets/html5.png" alt="HTML5">
-                <img width="60px" src="assets/css3.png" alt="CSS3">
-                <img width="60px" src="assets/javascript.png" alt="JavaScript">
-                <img width="50px" src="assets/node-js.png" alt="Node Js">
+                <img width="45px" src="assets/html5.png" alt="HTML5">
+                <img width="53px" src="assets/css3.png" alt="CSS3">
+                <img width="52px" src="assets/javascript.png" alt="JavaScript">
+                <img width="38px" src="assets/node-js.png" alt="Node Js">
             </div>
         </aside>
         <div class="section_images">
@@ -135,14 +139,14 @@
     </section>
     <hr>
     <section class="section2">
-        <div class="projectsHeading">Latest Projects</div>
+        <div class="projectsHeading">--Latest Projects--</div>
         <div class="projects" id="projects">
             <div class="project_card">
                 <img class="project_image" src="assets/spotify_clone.png" alt="spotyfy_clone">
                 <div class="project_detail">
                     This is a clone of landing page of spotify a very famous music company. Made by HTML and CSS only.
                 </div>
-                <div>
+                <div class="projectLinks">
                     <a class="deployed_link" href="https://spotify-clone-lovat-six-24.vercel.app/"
                         target="_blank">Check</a>
                     <a class="source_code" href="https://github.com/SubratSinghRathore/Spotify-Clone"
@@ -156,7 +160,7 @@
                     This is a fully responsive rock paper scissor game. Made by HTML, CSS and Javascript only. Click on
                     check buttton to play.
                 </div>
-                <div>
+                <div class="projectLinks">
                     <a class="deployed_link" href=" https://rock-paper-scissor-game-beta-six.vercel.app/"
                         target="_blank">Check</a>
                     <a class="source_code" href="https://github.com/SubratSinghRathore/Rock-Paper-Scissor-Game"
@@ -169,20 +173,7 @@
                 <div class="project_detail">
                     This is an clone of landing page of spotify a very famous music company. Made by HTML and CSS only.
                 </div>
-                <div>
-                    <a class="deployed_link" href="https://spotify-clone-lovat-six-24.vercel.app/"
-                        target="_blank">Check</a>
-                    <a class="source_code" href="https://github.com/SubratSinghRathore/Spotify-Clone"
-                        target="_blank">Source Code</a>
-                </div>
-
-            </div>
-            <div class="project_card">
-                <img class="project_image" src="assets/spotify_clone.png" alt="spotyfy_clone">
-                <div class="project_detail">
-                    This is an clone of landing page of spotify a very famous music company. Made by HTML and CSS only.
-                </div>
-                <div>
+                <div class="projectLinks">
                     <a class="deployed_link" href="https://spotify-clone-lovat-six-24.vercel.app/"
                         target="_blank">Check</a>
                     <a class="source_code" href="https://github.com/SubratSinghRathore/Spotify-Clone"
@@ -193,13 +184,11 @@
         </div>
         <hr>
     </section>
-    <section class="section3" style="display: none;">
-        <div class="about flex" id="about">
-            <div class="about_image_div">
-                <img class="about_image" src="assets/profile_image.png" alt="profile image">
-            </div>
+    <section class="section3">
+        <div class="about" id="about">
+            <img class="about_image" src="assets/profile_image.png" alt="profile image">
             <div class="about_me">
-                <div class="about_content" style="margin-top: -270px;">
+                <div class="about_content">
                     <div class="about_heading green_bold">About Me</div>
                     <p style="color: gray;">Hi, I'm Subrat Singh, a passionate and dedicated web developer with a knack
                         for creating dynamic
@@ -212,46 +201,48 @@
                     </div>
                 </div>
                 <div class="seLine"></div>
-                <div class="about_skills" style="margin: 60px 15px;">
-                    <div class="html5 margin flex">
-                        <img width="45px" src="assets/html5.png" alt="HTML5">
-                        <div class="progress_bar">
-                            <div class="html_bar">
+                <div class="aboutSkillsEducationBox">
+                    <div class="about_skills" style="margin: 60px -15px;">
+                        <div class="html5 margin flex">
+                            <img width="45px" src="assets/html5.png" alt="HTML5">
+                            <div class="progress_bar">
+                                <div class="html_bar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="css3 margin flex">
+                            <img width="53px" src="assets/css3.png" alt="CSS3">
+                            <div class="progress_bar">
+                                <div class="css_bar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="javascript margin flex">
+                            <img width="52px" src="assets/javascript.png" alt="JavaScript">
+                            <div class="progress_bar">
+                                <div class="javascript_bar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="node_js margin flex">
+                            <img width="38px" src="assets/node-js.png" alt="Node Js">
+                            <div class="progress_bar">
+                                <div class="node_js_bar">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="css3 margin flex">
-                        <img width="53px" src="assets/css3.png" alt="CSS3">
-                        <div class="progress_bar">
-                            <div class="css_bar">
-                            </div>
-                        </div>
+                    <div class="about_education">
+                        <dl>
+                            <dt>Bachelor of Computer Applications</dt>
+                            <dd>from Allenhouse Institute of Technology in year 2024 to currently doing</dd>
+                        </dl>
                     </div>
-                    <div class="javascript margin flex">
-                        <img width="52px" src="assets/javascript.png" alt="JavaScript">
-                        <div class="progress_bar">
-                            <div class="javascript_bar">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="node_js margin flex">
-                        <img width="38px" src="assets/node-js.png" alt="Node Js">
-                        <div class="progress_bar">
-                            <div class="node_js_bar">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about_education" style="margin: 60px 15px;">
-                    <dl>
-                        <dt>Bachelor of Computer Applications</dt>
-                        <dd>from Allenhouse Institute of Technology in year 2024 to currently doing</dd>
-                    </dl>
                 </div>
             </div>
         </div>
-        <hr>
     </section>
+    <hr>
     <section class="section4">
 
     </section>
@@ -261,14 +252,14 @@
                 --Connect With Me--
             </div>
 
-                <input class="name_input contact_input margin" type="text" placeholder="Fill Your Name">
-        
-        
-                <input class="email_input contact_input margin" type="email" placeholder="Fill Your Email">
+            <input class="name_input contact_input margin" type="text" placeholder="Fill Your Name">
 
-        
-                <textarea class="textarea_input" name="" id="" placeholder="Type Your Message"></textarea>
-            
+
+            <input class="email_input contact_input margin" type="email" placeholder="Fill Your Email">
+
+
+            <textarea class="textarea_input" name="" id="" placeholder="Type Your Message"></textarea>
+
             <div>
                 <button class="connect_btn">send</button>
             </div>

@@ -16,12 +16,57 @@
     #navMenu {
         display: inherit;
     }
-}
-@media only screen and (max-width: 490px) {
-    #logoName{
+    .project_card {
+        width: 200px;
+
+    }
+
+    .project_image {
+        height: 113px !important;
+        width: 170px;
+    }
+    .project_detail {
+        font-size: medium;
+    }
+    .projectLinks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .about_image {
         display: none;
     }
+    .about_skills {
+        width: 40vw;
+    }
+    .section3 {
+        height: 76vh;
+    }
+    .about_skills {
+        margin: 0px !important;
+    }
+    .about {
+        padding-top: 0px !important;
+    }
 }
+
+@media only screen and (max-width: 490px) {
+    #logoName {
+        display: none;
+    }
+    #headerMain {
+        display: none;
+    }
+    .asideContent {
+        font-size: 1em !important;
+    }
+    span {
+        font-size: 20px !important;
+    }
+}
+
 :root {
     --dark-theme: #272838;
     --mid-dark-theme: #32973c;
@@ -104,7 +149,7 @@ body {
 }
 
 .theme_black {
-    background-color: var(--dark-theme);
+    background-color: var(--dark-theme) !important;
     color: white;
     transition-duration: 0.2s;
 }
@@ -251,7 +296,7 @@ nav ul li a:hover {
 .navPosition {
     position: sticky;
     z-index: 2;
-    top: 0px;
+    top: -1px;
     background-color: #FFFFFF;
 }
 
@@ -325,7 +370,7 @@ hr {
 }
 
 .projects {
-    margin: 80px 120px;
+    margin: 80px 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -335,7 +380,7 @@ hr {
 .project_card {
     border: 1px solid gray;
     border-radius: 7px;
-    width: 340px;
+    max-width: 340px;
     height: 396px;
     display: flex;
     flex-direction: column;
@@ -354,7 +399,7 @@ hr {
 
 .project_image {
     height: 200px;
-    width: 300px;
+    max-width: 300px;
     border-radius: 7px;
     margin: 0px 25px;
 }
@@ -464,14 +509,19 @@ textarea {
 
 .about {
     display: flex;
+    justify-content: space-around;
     padding-top: 60px;
     margin-top: 0px;
 }
 
 .about_image {
-    margin-bottom: -19px;
-    width: 500px;
+    margin-bottom: 150px;
+    padding-top: 10px;
+    width: 400px;
     filter: brightness(90%) contrast(90%) drop-shadow(0px 0px 15px rgb(48, 48, 48));
+    border: 2px solid gray;
+    border-radius: 7px;
+    box-shadow: inset 0px 0px 15px 2px gray;
 }
 
 .progress_bar {
@@ -544,11 +594,15 @@ textarea {
 }
 
 .about_me {
+    width: 50vw;
+}
+
+.aboutSkillsEducationBox {
     position: relative;
 }
 
 .about_skills {
-    position: absolute;
+    position: absolute;;
 }
 
 .about_education {
@@ -586,7 +640,7 @@ textarea {
 }
 
 .seLine {
-    width: 66vw;
+    width: 100%;
     height: 5px;
     background-color: rgb(156, 255, 204);
     border-radius: 5px;
@@ -599,20 +653,29 @@ textarea {
     box-shadow: 0px 11px 25px -6px gray;
     position: absolute;
     width: 100%;
-    top: -150px;
+    top: -160px;
 
+}
+
+.navMenuAppear {
+    top: 72px;
+    z-index: 2;
+    background-color: var(--light-theme);
+    width: 100%;
 }
 
 .navMenuBoxList {
     list-style-type: none;
     background-color: rgba(250, 235, 215, 0);
     text-align: center;
+    width: 100%;
 }
 
 .navMenuBoxList li a {
     text-decoration: none;
-    color: gray;
+    color: var(--mid-dark-theme);
     font-size: 20px;
     font-weight: 500;
     margin: 3px;
+    width: 100%;
 }

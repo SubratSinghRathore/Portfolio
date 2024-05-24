@@ -23,6 +23,7 @@ document.getElementsByClassName("theme")[0].addEventListener("click", () => {
     document.querySelectorAll(".navLink")[1].classList.toggle("nav_color");
     document.querySelectorAll(".navLink")[2].classList.toggle("nav_color");
     document.querySelectorAll(".navLink")[3].classList.toggle("nav_color");
+    document.querySelector(".navMenuBox").classList.toggle("theme_black");
 
     theme.classList.toggle("theme_black");
     themeBorder.classList.toggle("theme_border");
@@ -65,5 +66,5 @@ function educationFunction(){
 }
 
 document.getElementById("navMenu").addEventListener("click", () => {
-    
+    document.getElementById("navMenuBox").classList.toggle("navMenuAppear");
 })
