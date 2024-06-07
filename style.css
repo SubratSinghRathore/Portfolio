@@ -426,6 +426,8 @@ hr {
     margin: 0px 5px;
     text-decoration: none;
     border-radius: 20px;
+    transition: 0.3s;
+
 }
 
 .deployed_link:hover {
@@ -440,6 +442,8 @@ hr {
     margin: 0px 5px;
     text-decoration: none;
     border-radius: 20px;
+    transition: 0.3s;
+
 }
 
 .source_code:hover {
@@ -687,4 +691,29 @@ textarea {
     font-weight: 500;
     margin: 3px;
     width: 100%;
+}
+
+.moreProject{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.moreProjectLink{
+    margin: auto;
+    width: 160px;
+    padding: 4px 15px;
+    font-weight: 600;
+    background-color: rgb(156, 255, 204);
+    color: var(--mid-dark-theme);
+    margin: 0px 5px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.moreProjectLink:hover{
+    box-shadow: 5px 5px 15px 2px gray;
 }
