@@ -8,7 +8,7 @@ document.getElementsByClassName("theme")[0].addEventListener("click", () => {
     const email_input = document.getElementsByClassName("email_input")[0];
     const textarea_input = document.getElementsByClassName("textarea_input")[0];
 
-    
+
     const svgChanger1 = document.getElementsByClassName("svg1")[0];
     const svgChanger2 = document.getElementsByClassName("svg2")[0];
     const svgChanger3 = document.getElementsByClassName("svg3")[0];
@@ -33,7 +33,7 @@ document.getElementsByClassName("theme")[0].addEventListener("click", () => {
     name_input.classList.toggle("input_background");
     email_input.classList.toggle("input_background");
     textarea_input.classList.toggle("input_background");
-   
+
     svgChanger1.classList.toggle("svg");
     svgChanger2.classList.toggle("svg");
     svgChanger3.classList.toggle("svg");
@@ -46,7 +46,7 @@ document.getElementsByClassName("theme")[0].addEventListener("click", () => {
 });
 
 
-function skillFunction(){
+function skillFunction() {
     document.getElementsByClassName("about_skills")[0].classList.add("skillsVisible");
     document.getElementsByClassName("about_education")[0].classList.remove("educationVisible");
     const skillsStyle = document.getElementById("skills");
@@ -55,7 +55,7 @@ function skillFunction(){
 
 }
 
-function educationFunction(){
+function educationFunction() {
     document.getElementsByClassName("about_education")[0].classList.add("educationVisible")
     document.getElementsByClassName("about_skills")[0].classList.remove("skillsVisible");
     document.getElementsByClassName("about_skills")[0].classList.add("skillsHidden");
@@ -67,4 +67,64 @@ function educationFunction(){
 
 document.getElementById("navMenu").addEventListener("click", () => {
     document.getElementById("navMenuBox").classList.toggle("navMenuAppear");
+})
+const wHeight = window.innerHeight;
+
+function scrollFH() {
+    if (document.getElementById("homeSection").getBoundingClientRect().bottom > 200) {
+        document.getElementsByClassName("aside")[0].style.transform = "translateX(0px)";
+        document.getElementsByClassName("section_images")[0].style.transform = "translateX(0px)";
+
+    } else {
+        document.getElementsByClassName("aside")[0].style.transform = "translateX(-1000px)";
+        document.getElementsByClassName("section_images")[0].style.transform = "translateX(1000px)";
+    }
+
+
+
+
+}
+
+function scrollFP() {
+    const project_card = document.querySelectorAll(".project_card");
+    project_card.forEach((e) => {
+        if (e.getBoundingClientRect().top < wHeight) {
+            e.style.transform = "scale(1)"
+        } else {
+            e.style.transform = "scale(0)"
+        }
+    })
+
+}
+
+function scrollFA() {
+    const aboutSection = document.getElementById("aboutSection");
+    if (aboutSection.getBoundingClientRect().top < wHeight && aboutSection.getBoundingClientRect().bottom > 100) {
+        document.getElementById("about_image").style.transform = "translateX(0px)";
+        document.getElementById("about_me").style.transform = "translateX(0px)";
+    } else {
+        document.getElementById("about_image").style.transform = "translateX(-1000px)";
+        document.getElementById("about_me").style.transform = "translateX(1000px)";
+    }
+}
+
+function scrollFC() {
+    if (document.getElementById("connectSection").getBoundingClientRect().top < wHeight) {
+        document.getElementById("contact").style.transform = "scale(1)";
+    } else {
+        document.getElementById("contact").style.transform = "scale(0)";
+    }
+}
+
+window.addEventListener("scroll", () => {
+    scrollFH();
+})
+window.addEventListener("scroll", () => {
+    scrollFP();
+})
+window.addEventListener("scroll", () => {
+    scrollFA();
+})
+window.addEventListener("scroll", () => {
+    scrollFC();
 })
