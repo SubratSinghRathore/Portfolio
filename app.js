@@ -23,6 +23,7 @@ document.getElementsByClassName("theme")[0].addEventListener("click", () => {
     document.querySelectorAll(".navLink")[1].classList.toggle("nav_color");
     document.querySelectorAll(".navLink")[2].classList.toggle("nav_color");
     document.querySelectorAll(".navLink")[3].classList.toggle("nav_color");
+    document.querySelectorAll(".navLink")[4].classList.toggle("nav_color");
     document.querySelector(".navMenuBox").classList.toggle("theme_black");
 
     theme.classList.toggle("theme_black");
@@ -128,3 +129,7 @@ window.addEventListener("scroll", () => {
 window.addEventListener("scroll", () => {
     scrollFC();
 })
+
+function loder(){
+    document.getElementById("preloder").style.display = "none";
+}
