@@ -9,12 +9,13 @@
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9218046153595106"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 </head>
 
 <body onload="loder()">
     <div id="preloder">
-        <img id="preloderImage" src="https://i.pinimg.com/originals/aa/c3/63/aac3638ab48538e7546e22cc25efd566.gif" alt="preloder">
+        <img id="preloderImage" src="https://i.pinimg.com/originals/aa/c3/63/aac3638ab48538e7546e22cc25efd566.gif"
+            alt="preloder">
     </div>
     <header>
         <div class="headerMain" id="headerMain">
@@ -99,10 +100,10 @@
                 </div>
                 <ul class="flex" id="navLinks">
                     <li><a class="navLink" href="#homeSection">Home</a></li>
-                <li><a class="navLink" href="#aboutSection">About</a></li>
-                <li><a class="navLink" href="#projectSection">My Projects</a></li>
-                <li><a class="navLink" href="#connectSection">Contact us</a></li>
-                <li><a class="navLink" href="./learn.html">Learn</a></li>
+                    <li><a class="navLink" href="#aboutSection">About</a></li>
+                    <li><a class="navLink" href="#projectSection">My Projects</a></li>
+                    <li><a class="navLink" href="#connectSection">Contact us</a></li>
+                    <li><a class="navLink" href="./learn.html">Learn</a></li>
                 </ul>
                 <div class="themeChanger">
                     <div class="theme cursorPointer">
@@ -169,8 +170,7 @@
                     check buttton to play.
                 </div>
                 <div class="projectLinks">
-                    <a class="deployed_link" href="https://stonepaperscissorssr.vercel.app/"
-                        target="_blank">Check</a>
+                    <a class="deployed_link" href="https://stonepaperscissorssr.vercel.app/" target="_blank">Check</a>
                     <a class="source_code" href="https://github.com/SubratSinghRathore/Rock-Paper-Scissor-Game"
                         target="_blank">Source Code</a>
                 </div>
@@ -182,10 +182,9 @@
                     This is an project of combination of digital and analog clock use javascript date and time object.
                 </div>
                 <div class="projectLinks">
-                    <a class="deployed_link" href="https://clockweb.vercel.app/"
-                        target="_blank">Check</a>
-                    <a class="source_code" href="https://github.com/SubratSinghRathore/Clock"
-                        target="_blank">Source Code</a>
+                    <a class="deployed_link" href="https://clockweb.vercel.app/" target="_blank">Check</a>
+                    <a class="source_code" href="https://github.com/SubratSinghRathore/Clock" target="_blank">Source
+                        Code</a>
                 </div>
 
             </div>
@@ -202,7 +201,8 @@
                 <div class="about_content">
                     <div class="about_heading green_bold">About Me</div>
                     <p style="color: gray;">Hi, I'm Subrat Singh, a passionate and dedicated web developer with a knack
-                        for creating dynamic and user-friendly websites. I have expanded my expertise to include full-stack development,
+                        for creating dynamic and user-friendly websites. I have expanded my expertise to include
+                        full-stack development,
                         working with back-end technologies such as Node.js
                     </p><br><br>
                     <div class="flex" style="justify-content: space-around;">
@@ -262,17 +262,23 @@
                 --Connect With Me--
             </div>
 
-            <input class="name_input contact_input margin" type="text" placeholder="Fill Your Name">
+            <form action="https://api.web3forms.com/submit" method="post" class="form">
+
+                <input type="hidden" name="access_key" value="66ad950c-4e6c-49af-bcad-77915c9e4d46">
+
+                <input class="name_input contact_input margin" name="name" type="text" placeholder="Fill Your Name" required>
 
 
-            <input class="email_input contact_input margin" type="email" placeholder="Fill Your Email">
+                <input class="email_input contact_input margin" name="email" type="email" placeholder="Fill Your Email" required>
 
 
-            <textarea class="textarea_input" name="" id="" placeholder="Type Your Message"></textarea>
+                <textarea class="textarea_input" name="Message" id="" placeholder="Type Your Message" required></textarea>
 
-            <div>
-                <button class="connect_btn">send</button>
-            </div>
+                <div>
+                    <button class="connect_btn" type="submit">send</button>
+                </div>
+
+            </form>
 
             <div class="links flex">
                 <div class="svg_padding">

@@ -101,6 +101,8 @@
     visibility: hidden;
 }
 
+::-webkit-scrollbar-thumb
+
 ::-webkit-scrollbar-thumb {
     background-color: rgb(106, 243, 172);
     border-radius: 9px;
@@ -496,6 +498,14 @@ hr {
     transform: scale(0);
 }
 
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
 input {
     border-radius: 5px;
     width: 60%;
@@ -517,10 +527,17 @@ textarea {
     font-weight: 600;
     background-color: rgb(156, 255, 204);
     color: var(--mid-dark-theme);
-    margin: 0px 5px;
+    margin: 5px 5px;
     text-decoration: none;
     border-radius: 20px;
     border: 1px solid var(--mid-dark-theme);
+}
+
+.connect_btn:hover{
+    width: 107px;
+    transition: 0.2s;
+    color: #000000;
+    background-color: #0c9200;
 }
 
 .down_links {
